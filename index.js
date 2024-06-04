@@ -14,7 +14,8 @@ MybatisMapper.prototype.createMapper = function(xmls) {
   // Parse each XML files
   for (var i = 0, xml; xml = xmls[i]; i++) {
     try{
-      var rawText = replaceCdata(fs.readFileSync(xml).toString());     
+      var content = xml.startsWith("<?") ? xml : fs.readFileSync(xml).toString()
+      var rawText = replaceCdata(content);     
       var mappers = HTML.parse(rawText);
     } catch (err){
 			throw new Error("Error occured during open XML file [" + xml + "]");
