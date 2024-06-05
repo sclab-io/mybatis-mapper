@@ -106,11 +106,6 @@ MybatisMapper.prototype.getStatement = function(namespace, sql, param, format) {
         throw new Error("Parameter " + checkParam.join(",") + " is not converted.");
       }
     }
-
-    // SQL formatting
-    if (format != undefined && format != null){
-      statement = sqlFormatter.format(statement, format);
-    }
   } catch (err) {
     throw err
   }
