@@ -19,11 +19,9 @@ describe("Unit Tests for Grave accent", function () {
     assert.equal(
       query,
       `
-SELECT
-  *
-FROM
-  user
-  AND \`group\` = 'manager'
+SELECT * 
+    FROM user
+    AND \`group\` = 'manager'
 `.trim()
     );
     done();

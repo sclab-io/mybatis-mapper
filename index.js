@@ -109,6 +109,8 @@ MybatisMapper.prototype.getStatement = function(namespace, sql, param, format) {
   } catch (err) {
     throw err
   }
+
+  statement = statement.trim();
   
   return statement;
 };

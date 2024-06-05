@@ -14,12 +14,8 @@ describe("Unit Tests for Issue of mavridiSS", function(){
     var query = mybatisMapper.getStatement('testUnderline', 'findOne', param, format);
     assert.equal(query,
 `
-SELECT
-  *
-FROM
-  article
-WHERE
-  name = '10'
+SELECT * FROM article
+    WHERE  name = '10'
 `.trim())
     done();
   });
