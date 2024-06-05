@@ -21,8 +21,7 @@
     "mysql"
   ],
   "dependencies": {
-    "html-parse-stringify": "3.0.1",
-    "sql-formatter": "12.2.4"
+    "html-parse-stringify": "3.0.1"
   },
   "license": "Apache-2.0",
   "readmeFilename": "README.md",

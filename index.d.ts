@@ -27,8 +27,7 @@ declare namespace MybatisMapper {
   export function getStatement(
     namespace: string,
     sql: string,
-    param?: Params,
-    format?: Format
+    param?: Params
   ): string;
 
   export function getMapper(): MyBatisMapper;

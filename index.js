@@ -1,6 +1,5 @@
 var fs = require('fs');
 var HTML = require('html-parse-stringify');
-var sqlFormatter = require("sql-formatter");
 var convert = require('./lib/convert');
 var myBatisMapper = {};
 
@@ -81,7 +80,7 @@ function replaceCdata(rawText) {
   return rawText;
 }
 
-MybatisMapper.prototype.getStatement = function(namespace, sql, param, format) {
+MybatisMapper.prototype.getStatement = function(namespace, sql, param) {
   var statement = '';
   
   // Parameter Check
